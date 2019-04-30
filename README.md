@@ -1,4 +1,3 @@
-# Getting-and-Cleaning-Data-Assignment
 # Coursera John Hopkins Data Science Getting and Cleaning Data Assignment
 
 This project is meant to demonstrate the skills to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. 
@@ -14,3 +13,8 @@ The goal is to create R script that does the following:
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+## Other Files
+
+run_analysis.R  R script executing the steps required for this assignment. 
+codebook.MD     Readme file that describes data, variables and transformations done to clean the dataset.
+summary.csv     Independent tidy set as a CSV file describing the average of each variable for each activity and each subject.
