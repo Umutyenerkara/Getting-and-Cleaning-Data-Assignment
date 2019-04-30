@@ -26,3 +26,7 @@ Readme file that describes data, variables and transformations done to clean the
 _summary.csv_    
 
 Independent tidy set as a CSV file describing the average of each variable for each activity and each subject.
+
+##Important
+
+For script to work, the locations of files in "UCI HAR Dataset" directory should be same as the original directory. 
