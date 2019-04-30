@@ -54,8 +54,8 @@ tidy_data <- as_tibble(tidy_data)
 
 tidy_data_averages <- tidy_data %>% group_by(id, activity) %>% summarise_at(.vars = names(.)[3:68],
                                                                            .funs = c(mean="mean"))
-#Writes the resulting data frame as a new csv file named "summary.csv"
+#Writes the resulting data frame to a new txt file named "summary.txt"
 
-write.csv(tidy_data_averages, file = "summary.csv", row.names = F )
+write.table(tidy_data_averages, file = "summary.txt", row.names = F )
 
 
