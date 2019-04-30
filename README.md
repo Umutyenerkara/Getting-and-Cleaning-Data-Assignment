@@ -23,9 +23,9 @@ _codebook.MD_
 
 Readme file that describes data, variables and transformations done to clean the dataset.
 
-_summary.csv_    
+_summary.txt_    
 
-Independent tidy set as a CSV file describing the average of each variable for each activity and each subject.
+Independent tidy set as a txt file containing the averages of each variable for each activity and each subject.
 
 ## Important
 
