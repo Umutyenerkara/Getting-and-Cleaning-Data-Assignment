@@ -15,6 +15,11 @@ The goal is to create R script that does the following:
 
 ## Other Files
 
-run_analysis.R  R script executing the steps required for this assignment. 
-codebook.MD     Readme file that describes data, variables and transformations done to clean the dataset.
-summary.csv     Independent tidy set as a CSV file describing the average of each variable for each activity and each subject.
+_run_analysis.R_
+R script executing the steps required for this assignment. 
+
+_codebook.MD_   
+Readme file that describes data, variables and transformations done to clean the dataset.
+
+_summary.csv_    
+Independent tidy set as a CSV file describing the average of each variable for each activity and each subject.
