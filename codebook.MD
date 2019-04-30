@@ -37,4 +37,4 @@ walking = "1", walking_upstairs = "2", walking_downstairs = "3", sitting = "4", 
 
 9. Creates a new data frame from the averages of all variables using Dplyr functions group_by and summarize_at. Adds string "mean" at the end of original variables.
 
-10. #Writes the resulting independent data frame to a new txt file named "summary.txt" in your working directory. 
+10. Writes the resulting independent data frame to a new txt file named "summary.txt" in your working directory. 
