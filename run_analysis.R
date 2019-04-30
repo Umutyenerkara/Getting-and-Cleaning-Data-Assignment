@@ -2,13 +2,13 @@ library(tidyverse)
 
 #Read required files
 
-x_train <- read.table("C:/Users/Umut Yener Kara/Desktop/Coursera/Course 3/Assignment/UCI HAR Dataset/train/X_train.txt")
-y_train <- read.table("C:/Users/Umut Yener Kara/Desktop/Coursera/Course 3/Assignment/UCI HAR Dataset/train/y_train.txt")
-x_test <- read.table("C:/Users/Umut Yener Kara/Desktop/Coursera/Course 3/Assignment/UCI HAR Dataset/test/X_test.txt")
-y_test <- read.table("C:/Users/Umut Yener Kara/Desktop/Coursera/Course 3/Assignment/UCI HAR Dataset/test/y_test.txt")
-subject_test <- read.table("C:/Users/Umut Yener Kara/Desktop/Coursera/Course 3/Assignment/UCI HAR Dataset/test/subject_test.txt")
-subject_train <- read.table("C:/Users/Umut Yener Kara/Desktop/Coursera/Course 3/Assignment/UCI HAR Dataset/train/subject_train.txt")
-featureNames <- read.table("C:/Users/Umut Yener Kara/Desktop/Coursera/Course 3/Assignment/UCI HAR Dataset/features.txt")
+x_train <- read.table("./UCI HAR Dataset/train/X_train.txt")
+y_train <- read.table("./UCI HAR Dataset/train/y_train.txt")
+x_test <- read.table("./UCI HAR Dataset/test/X_test.txt")
+y_test <- read.table("./UCI HAR Dataset/test/y_test.txt")
+subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
+subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")
+featureNames <- read.table("./UCI HAR Dataset/features.txt")
 
 #Merge the training and test activity data in a data frame. Rename the variable. Change it to factor and rename the levels using fct_recode (optional).
 
@@ -28,12 +28,12 @@ subject_ids <- subject_ids %>% mutate(id = as_factor(id))
 
 merged_data <- rbind(x_train, x_test)
 
-#Find the index number of columns including "mean()" and "std()". Then select these columns within the merged data set. 
+#Find the index number of columns including "mean()" and "std()". Then select these columns from the merged data set. 
 
 columns <- grep("mean()\\(\\)|std()\\(\\)",featureNames$V2, ignore.case = T)
 merged_data <- merged_data %>% select(seq.int(columns))
 
-#Find the relevant column names from featuresNames data set. Then pass them to merged dataset using transpose function.
+#Find the relevant column names from featuresNames data set. Then pass them to merged dataset as column names using transpose function.
 
 
 columnsmeanstd <- filter(featureNames, grepl("mean()\\(\\)|std()\\(\\)",featureNames$V2, ignore.case = T))
